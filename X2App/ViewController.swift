@@ -10,18 +10,27 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var pathToFileTextField: NSTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
         }
     }
 
+    @IBAction func calculate(_ sender: Any) {
+        let path = URL(fileURLWithPath: pathToFileTextField.stringValue)
+        guard let data = try? String(contentsOf: path) else {
+            print("An error occured opening file")
+            return
+        }
+
+        print(try! FileManager.default.parse(file: path))
+    }
 
 }
 

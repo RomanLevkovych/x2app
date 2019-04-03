@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B9C5D2254D2E40032E7B1 /* DataRepresenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B9C5C2254D2E40032E7B1 /* DataRepresenation.swift */; };
+		300B9C5F2254DA3F0032E7B1 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B9C5E2254DA3F0032E7B1 /* FileManager+Extension.swift */; };
 		308678FE224907ED004A88C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308678FD224907ED004A88C8 /* AppDelegate.swift */; };
 		30867900224907ED004A88C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308678FF224907ED004A88C8 /* ViewController.swift */; };
 		30867902224907F0004A88C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30867901224907F0004A88C8 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300B9C5C2254D2E40032E7B1 /* DataRepresenation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresenation.swift; sourceTree = "<group>"; };
+		300B9C5E2254DA3F0032E7B1 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		308678FA224907ED004A88C8 /* X2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = X2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308678FD224907ED004A88C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308678FF224907ED004A88C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				30867903224907F0004A88C8 /* Main.storyboard */,
 				30867906224907F0004A88C8 /* Info.plist */,
 				30867907224907F0004A88C8 /* X2App.entitlements */,
+				300B9C5C2254D2E40032E7B1 /* DataRepresenation.swift */,
+				300B9C5E2254DA3F0032E7B1 /* FileManager+Extension.swift */,
 			);
 			path = X2App;
 			sourceTree = "<group>";
@@ -134,7 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30867900224907ED004A88C8 /* ViewController.swift in Sources */,
+				300B9C5F2254DA3F0032E7B1 /* FileManager+Extension.swift in Sources */,
 				308678FE224907ED004A88C8 /* AppDelegate.swift in Sources */,
+				300B9C5D2254D2E40032E7B1 /* DataRepresenation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
