@@ -25,7 +25,9 @@ class ViewController: NSViewController {
     @IBAction func calculate(_ sender: Any) {
         let path = URL(fileURLWithPath: pathToFileTextField.stringValue)
 
-        print(try! FileManager.default.parse(file: path))
+        guard let data = try? FileManager.default.parse(file: path) else { print("can't read file"); return }
+        var distr = PoissonDirstibution(from: data)
+        distr.regroup()
     }
 
 }

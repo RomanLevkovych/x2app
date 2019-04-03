@@ -44,6 +44,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300B9C66225558DC0032E7B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				300B9C5C2254D2E40032E7B1 /* DataRepresenation.swift */,
+				300B9C602254E4980032E7B1 /* Distribution.swift */,
+				300B9C642254E9D10032E7B1 /* ExponentialDistribution.swift */,
+				300B9C622254E8920032E7B1 /* PoissonDistribution.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		308678F1224907ED004A88C8 = {
 			isa = PBXGroup;
 			children = (
@@ -63,17 +74,14 @@
 		308678FC224907ED004A88C8 /* X2App */ = {
 			isa = PBXGroup;
 			children = (
+				300B9C66225558DC0032E7B1 /* Core */,
 				308678FD224907ED004A88C8 /* AppDelegate.swift */,
 				308678FF224907ED004A88C8 /* ViewController.swift */,
+				300B9C5E2254DA3F0032E7B1 /* FileManager+Extension.swift */,
 				30867901224907F0004A88C8 /* Assets.xcassets */,
 				30867903224907F0004A88C8 /* Main.storyboard */,
 				30867906224907F0004A88C8 /* Info.plist */,
 				30867907224907F0004A88C8 /* X2App.entitlements */,
-				300B9C5C2254D2E40032E7B1 /* DataRepresenation.swift */,
-				300B9C5E2254DA3F0032E7B1 /* FileManager+Extension.swift */,
-				300B9C602254E4980032E7B1 /* Distribution.swift */,
-				300B9C622254E8920032E7B1 /* PoissonDistribution.swift */,
-				300B9C642254E9D10032E7B1 /* ExponentialDistribution.swift */,
 			);
 			path = X2App;
 			sourceTree = "<group>";

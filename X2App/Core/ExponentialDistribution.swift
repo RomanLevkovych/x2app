@@ -9,7 +9,7 @@
 import Foundation
 
 class ExponentialDistribution: Distribution {
-    var data: [DataRepresentation] = []
+    var data: [DataRepresentation] = [] // TODO: create init from [DataRepresentation]
 
     var lambda: Double { return 1.0 / data.reduce(0.0) { $0 + Double($1.amount) } } // TODO: - calculate average of continious distribution
 

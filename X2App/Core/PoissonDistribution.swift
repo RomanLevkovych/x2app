@@ -10,14 +10,14 @@ import Foundation
 
 class PoissonDirstibution: Distribution {
 
-    private(set) var data: [DataRepresentation]
+    var data: [DataRepresentation]
 
     init(from data: [DataRepresentation]) {
         self.data = data
     }
 
     var lambda: Double {
-        return data.reduce(0.0) { $0 + Double($1.amount)*$1.start } / Double(data.count)
+        return data.reduce(0.0) { $0 + Double($1.amount)*$1.start } / data.reduce(0.0) { $0 + Double($1.amount) }
     }
 
     func probability(of item: DataRepresentation) -> Double {
@@ -27,8 +27,8 @@ class PoissonDirstibution: Distribution {
     }
 
     private func factorial(_ item: Double) -> Double {
+        if item == 0.0 { return 1.0 }
         return (1...Int(item)).reduce(1.0) { $0 * Double($1) }
     }
-
 
 }
