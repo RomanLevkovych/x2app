@@ -24,10 +24,6 @@ class ViewController: NSViewController {
 
     @IBAction func calculate(_ sender: Any) {
         let path = URL(fileURLWithPath: pathToFileTextField.stringValue)
-        guard let data = try? String(contentsOf: path) else {
-            print("An error occured opening file")
-            return
-        }
 
         print(try! FileManager.default.parse(file: path))
     }
