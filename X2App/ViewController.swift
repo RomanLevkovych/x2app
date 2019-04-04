@@ -10,7 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var pathToFileTextField: NSTextField!
+    @IBOutlet private weak var pathToFileTextField: NSTextField!
+    @IBOutlet private weak var x2EmpiricLabel: NSTextField!
+    @IBOutlet private weak var x2CriticLabel: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,9 @@ class ViewController: NSViewController {
 
         guard let data = try? FileManager.default.parse(file: path) else { print("can't read file"); return }
         var distr = PoissonDirstibution(from: data)
+        print(distr.data)
         distr.regroup()
+        dump(distr)
     }
 
 }

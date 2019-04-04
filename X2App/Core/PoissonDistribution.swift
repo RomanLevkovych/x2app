@@ -23,7 +23,6 @@ class PoissonDirstibution: Distribution {
     func probability(of item: DataRepresentation) -> Double {
         let s = item.start
         return pow(lambda, s)*exp(-lambda) / factorial(s)
-
     }
 
     private func factorial(_ item: Double) -> Double {

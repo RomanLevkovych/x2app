@@ -16,10 +16,10 @@ protocol Distribution {
 
 extension Distribution {
     mutating func regroup() {
-//        let totalAmount = data.reduce(0.0) { $0 + Double($1.amount) }
+        let totalAmount = data.reduce(0.0) { $0 + Double($1.amount) }
         var index = 0
         while index < data.count {
-            if  data[index].amount < 5 { // totalAmount*probability(of: data[index]) < 10 ||
+            if  data[index].amount < 5 && totalAmount*probability(of: data[index]) < 10 { // check, do we need to merge to the right next
                 let current = data.remove(at: index)
                 data[index] = DataRepresentation.init(start: current.start,
                                                       finish: data[index].finish,
@@ -27,14 +27,12 @@ extension Distribution {
             }
             index += 1
         }
-        if  data[data.count - 1].amount < 5 { // totalAmount*probability(of: data[index]) < 10 ||
+        // check last element of item
+        if  data[index].amount < 5 && totalAmount*probability(of: data[index]) < 10 {
             let current = data.remove(at: data.count - 1)
-            data[data.count - 1] = DataRepresentation.init(start: current.start,
-                                                           finish: data[data.count - 1].finish,
+            data[data.count - 1] = DataRepresentation.init(start: data[data.count - 1].start,
+                                                           finish: current.finish,
                                                            amount: current.amount + data[data.count - 1].amount)
         }
-        // TODO: implement regrouping of data
-        // if amount < 5 or totalAmount * probability_i < 10 then merge to the right next
-        // if it is the last one than we'll merge with previous one
     }
 }

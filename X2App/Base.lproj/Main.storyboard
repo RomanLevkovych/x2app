@@ -727,17 +727,59 @@
                                     <action selector="calculate:" target="XfG-lQ-9wD" id="hzC-km-DXm"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5He-nn-EbP">
+                                <rect key="frame" x="18" y="144" width="61" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="x^2_critic" id="Vjz-aX-tcv">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v7m-Ym-t4a">
+                                <rect key="frame" x="121" y="186" width="37" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="Fbe-2Z-81A">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D9M-YB-MDu">
+                                <rect key="frame" x="121" y="144" width="37" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="ljl-EA-7f3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="axn-8e-lx0">
+                                <rect key="frame" x="18" y="186" width="57" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="x^2_emp" id="KfW-X5-rpO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="6rW-6M-Uhg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5dG-2b-yWL"/>
                             <constraint firstAttribute="trailing" secondItem="FDo-yf-ZSj" secondAttribute="trailing" constant="20" id="Cc3-Ff-VhL"/>
                             <constraint firstItem="FDo-yf-ZSj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="F36-TM-Gqh"/>
+                            <constraint firstItem="axn-8e-lx0" firstAttribute="top" secondItem="6rW-6M-Uhg" secondAttribute="bottom" constant="25" id="HIV-ge-MXn"/>
                             <constraint firstItem="FDo-yf-ZSj" firstAttribute="leading" secondItem="6rW-6M-Uhg" secondAttribute="trailing" constant="20" id="a5m-5l-Rff"/>
+                            <constraint firstItem="v7m-Ym-t4a" firstAttribute="top" secondItem="axn-8e-lx0" secondAttribute="top" id="bES-rV-scA"/>
+                            <constraint firstItem="v7m-Ym-t4a" firstAttribute="leading" secondItem="axn-8e-lx0" secondAttribute="trailing" constant="50" id="l2y-dZ-QPA"/>
+                            <constraint firstItem="axn-8e-lx0" firstAttribute="leading" secondItem="6rW-6M-Uhg" secondAttribute="leading" id="n2i-tz-lwZ"/>
+                            <constraint firstItem="D9M-YB-MDu" firstAttribute="leading" secondItem="v7m-Ym-t4a" secondAttribute="leading" id="pMf-EQ-qB8"/>
                             <constraint firstItem="6rW-6M-Uhg" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pgI-VL-zSG"/>
+                            <constraint firstItem="5He-nn-EbP" firstAttribute="top" secondItem="axn-8e-lx0" secondAttribute="bottom" constant="25" id="w13-17-zgd"/>
+                            <constraint firstItem="D9M-YB-MDu" firstAttribute="bottom" secondItem="5He-nn-EbP" secondAttribute="bottom" id="wc5-h1-DBi"/>
+                            <constraint firstItem="5He-nn-EbP" firstAttribute="leading" secondItem="6rW-6M-Uhg" secondAttribute="leading" id="xPo-ZU-YpO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pathToFileTextField" destination="6rW-6M-Uhg" id="2Zp-2d-sfb"/>
+                        <outlet property="x2CriticLabel" destination="D9M-YB-MDu" id="kUz-jg-yCF"/>
+                        <outlet property="x2EmpiricLabel" destination="v7m-Ym-t4a" id="kGQ-Sa-yPj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
