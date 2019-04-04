@@ -9,13 +9,16 @@
 import Foundation
 
 class ExponentialDistribution: Distribution {
-    var data: [DataRepresentation] // TODO: create init from [DataRepresentation]
+    var data: [DistributionData] // TODO: create init from [DataRepresentation]
+    var lambda: Double
 
-    init(from data: [DataRepresentation]) {
-        self.data = data
+    init(from dr: [DataRepresentation]) {
+        data = [DistributionData]()
+        lambda = 1.0 / dr.reduce(0.0) { $0 + ($1.finish - $1.start) / 2.0 * Double($1.amount) }
+        data = dr.map { ($0, probability(of: $0)) }
     }
 
-    var lambda: Double { return 1.0 / data.reduce(0.0) { $0 + ($1.finish - $1.start) / 2.0 * Double($1.amount) } } // TODO: - calculate average of continious distribution
+     // TODO: - calculate average of continious distribution
 
     func probability(of item: DataRepresentation) -> Double {
         return distributionFunction(of: item.finish) - distributionFunction(of: item.start)

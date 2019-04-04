@@ -13,3 +13,5 @@ struct DataRepresentation {
     let finish: Double
     let amount: Int
 }
+
+typealias DistributionData = (dataInfo: DataRepresentation, probability: Double)

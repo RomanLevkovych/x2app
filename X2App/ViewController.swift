@@ -29,9 +29,14 @@ class ViewController: NSViewController {
 
         guard let data = try? FileManager.default.parse(file: path) else { print("can't read file"); return }
         var distr = PoissonDirstibution(from: data)
-        print(distr.data)
+        print(distr.lambda)
+        dump(distr)
         distr.regroup()
         dump(distr)
+
+        let pathTable = Bundle.main.url(forResource: "table", withExtension: "csv")
+        print(try! String(contentsOf: pathTable!))
+        print(distr.lambda)
     }
 
 }

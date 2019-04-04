@@ -10,14 +10,13 @@ import Foundation
 
 class PoissonDirstibution: Distribution {
 
-    var data: [DataRepresentation]
+    var data: [DistributionData]
+    var lambda: Double
 
-    init(from data: [DataRepresentation]) {
-        self.data = data
-    }
-
-    var lambda: Double {
-        return data.reduce(0.0) { $0 + Double($1.amount)*$1.start } / data.reduce(0.0) { $0 + Double($1.amount) }
+    init(from dr: [DataRepresentation]) {
+        data = []
+        lambda = dr.reduce(0.0) { $0 + Double($1.amount)*$1.start } / dr.reduce(0.0) { $0 + Double($1.amount) }
+        data = dr.map { ($0, probability(of: $0)) }
     }
 
     func probability(of item: DataRepresentation) -> Double {
