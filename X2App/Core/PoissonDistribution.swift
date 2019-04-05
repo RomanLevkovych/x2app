@@ -9,13 +9,14 @@
 import Foundation
 
 class PoissonDirstibution: Distribution {
-
     var data: [DistributionData]
     var lambda: Double
+    var degreesOfFreedom: Int
 
     init(from dr: [DataRepresentation]) {
         data = []
         lambda = dr.reduce(0.0) { $0 + Double($1.amount)*$1.start } / dr.reduce(0.0) { $0 + Double($1.amount) }
+        degreesOfFreedom = dr.count - 1
         data = dr.map { ($0, probability(of: $0)) }
     }
 
